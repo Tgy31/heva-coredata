@@ -20,6 +20,8 @@
 		5AF160DB1C162E69004A63E0 /* HCModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160DA1C162E69004A63E0 /* HCModelManager.m */; };
 		5AF160E01C16305E004A63E0 /* exercice.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160DD1C16305E004A63E0 /* exercice.csv */; };
 		5AF160E11C16305E004A63E0 /* exercice.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160DE1C16305E004A63E0 /* exercice.xlsx */; };
+		5AF160E71C163595004A63E0 /* HCHospital+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160E41C163595004A63E0 /* HCHospital+CoreDataProperties.m */; };
+		5AF160E81C163595004A63E0 /* HCHospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160E61C163595004A63E0 /* HCHospital.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +45,10 @@
 		5AF160DA1C162E69004A63E0 /* HCModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCModelManager.m; sourceTree = "<group>"; };
 		5AF160DD1C16305E004A63E0 /* exercice.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exercice.csv; sourceTree = "<group>"; };
 		5AF160DE1C16305E004A63E0 /* exercice.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = exercice.xlsx; sourceTree = "<group>"; };
+		5AF160E31C163595004A63E0 /* HCHospital+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HCHospital+CoreDataProperties.h"; sourceTree = "<group>"; };
+		5AF160E41C163595004A63E0 /* HCHospital+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HCHospital+CoreDataProperties.m"; sourceTree = "<group>"; };
+		5AF160E51C163595004A63E0 /* HCHospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHospital.h; sourceTree = "<group>"; };
+		5AF160E61C163595004A63E0 /* HCHospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHospital.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,7 @@
 		5AF160C81C162BA1004A63E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5AF160E91C1635A4004A63E0 /* HCHospital */,
 				5AF160D91C162E69004A63E0 /* HCModelManager.h */,
 				5AF160DA1C162E69004A63E0 /* HCModelManager.m */,
 			);
@@ -152,6 +159,17 @@
 				5AF160DE1C16305E004A63E0 /* exercice.xlsx */,
 			);
 			path = Ressources;
+			sourceTree = "<group>";
+		};
+		5AF160E91C1635A4004A63E0 /* HCHospital */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160E31C163595004A63E0 /* HCHospital+CoreDataProperties.h */,
+				5AF160E41C163595004A63E0 /* HCHospital+CoreDataProperties.m */,
+				5AF160E51C163595004A63E0 /* HCHospital.h */,
+				5AF160E61C163595004A63E0 /* HCHospital.m */,
+			);
+			name = HCHospital;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +250,8 @@
 				5AF160CB1C162BC7004A63E0 /* HCSplitViewController.m in Sources */,
 				5AF160D01C162C03004A63E0 /* HCLeftViewController.m in Sources */,
 				5AF160BB1C162A56004A63E0 /* HEVA_Coredata.xcdatamodeld in Sources */,
+				5AF160E81C163595004A63E0 /* HCHospital.m in Sources */,
+				5AF160E71C163595004A63E0 /* HCHospital+CoreDataProperties.m in Sources */,
 				5AF160B21C162A56004A63E0 /* AppDelegate.m in Sources */,
 				5AF160D61C162C1F004A63E0 /* HCRightViewController.m in Sources */,
 				5AF160AF1C162A56004A63E0 /* main.m in Sources */,

@@ -13,7 +13,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HCHospital : NSManagedObject
 
-// Insert code here to declare functionality of your managed object subclass
++ (instancetype)hospitalWithName:(NSString *)name
+          inManagedObjectContext:(NSManagedObjectContext *)context;
 
 @end
 

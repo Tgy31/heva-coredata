@@ -9,6 +9,14 @@
 #import <CoreData/CoreData.h>
 #import "HCModelManager.h"
 
+// Model
+#import "HCHospital.h"
+
+#define CSV_HEADER_SIZE 1
+#define CSV_COL_INDEX_NAME 0
+#define CSV_COL_INDEX_UNITCOUNT 1
+#define CSV_COL_INDEX_TURNOVER 2
+
 static HCModelManager *_defaultModel;
 
 @interface HCModelManager()
@@ -25,8 +33,7 @@ static HCModelManager *_defaultModel;
 - (instancetype)init {
     self = [super init];
     if (self) {
-        NSArray *data = [self readCSVFile:@"exercice" withExtension:@"csv"];
-        NSLog(@"%@", data);
+        [self readCSVFile:@"exercice"];
     }
     return self;
 }
@@ -42,23 +49,56 @@ static HCModelManager *_defaultModel;
 
 #pragma mark - File utilities
 
-- (NSArray *)readCSVFile:(NSString *)fileName withExtension:(NSString *)extension {
-    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:extension];
+- (void)readCSVFile:(NSString *)file {
+    
+    NSString *csvString = [self stringFromCSVFile:file];
+    NSArray *lines = [csvString componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    
+    lines = [lines subarrayWithRange:NSMakeRange(CSV_HEADER_SIZE, lines.count-1)]; // Excludes header from the computed lines
+    
+    // Instantiate one number formatter
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.numberStyle = NSNumberFormatterDecimalStyle;
+    
+    // Iterate through lines to create (or update) hospitals
+    for (NSString *line in lines) {
+        NSArray *values = [line componentsSeparatedByString:@","];
+        NSLog(@"%@", values);
+        
+        if (values.count > CSV_COL_INDEX_TURNOVER) {
+            NSString *name = [values objectAtIndex:CSV_COL_INDEX_NAME];
+            
+            NSString *sUnitCount = [values objectAtIndex:CSV_COL_INDEX_UNITCOUNT];
+            NSNumber *unitCount = [formatter numberFromString:sUnitCount];
+            
+            NSString *sTurnover = [values objectAtIndex:CSV_COL_INDEX_TURNOVER];
+            NSDecimalNumber *turnover = [NSDecimalNumber decimalNumberWithString:sTurnover];
+            
+            [self hospitalWithName:name unitCount:unitCount turnover:turnover];
+        }
+    }
+}
+
+- (NSString *)stringFromCSVFile:(NSString *)file {
+    NSString *path = [[NSBundle mainBundle] pathForResource:file ofType:@"csv"];
     NSError *error = nil;
     NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
     
     if (error) {
         NSLog(@"%@", error);
         return nil;
+    } else {
+        return string;
     }
+}
+
+- (HCHospital *)hospitalWithName:(NSString *)name unitCount:(NSNumber *)unitCount turnover:(NSDecimalNumber *)tunover {
+    HCHospital *hospital = [HCHospital hospitalWithName:name inManagedObjectContext:self.managedObjectContext];
     
-    NSArray *lines = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    NSMutableArray *finalArray = [NSMutableArray new];
-    for (NSString *line in lines) {
-        NSArray *array = [line componentsSeparatedByString:@","];
-        [finalArray addObject:array];
-    }
-    return finalArray;
+    hospital.unitCount = unitCount;
+    hospital.turnover = tunover;
+    
+    return hospital;
 }
 
 #pragma mark - Core Data stack
