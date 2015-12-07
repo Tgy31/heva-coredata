@@ -16,5 +16,6 @@
 - (void)saveContext;
 
 - (NSFetchedResultsController *)hospitalsFetchResultsController;
+- (NSInteger)sumOfUnitCount;
 
 @end

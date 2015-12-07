@@ -60,6 +60,35 @@ static HCModelManager *_defaultModel;
                                                           cacheName:nil];
 }
 
+#pragma mark - Sums
+
+- (NSInteger)sumOfUnitCount {
+    NSNumber *sum = [self sumForKeyPath:@"unitCount"];
+    return [sum integerValue];
+}
+
+- (NSNumber *)sumForKeyPath:(NSString *)keyPath {
+    NSExpression *keyPathExpression = [NSExpression expressionForKeyPath:keyPath];
+    NSExpression *sumOfCountExpression = [NSExpression expressionForFunction:@"sum:"
+                                                                   arguments:[NSArray arrayWithObject:keyPathExpression]];
+    
+    NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
+    [expressionDescription setName:keyPath];
+    [expressionDescription setExpression:sumOfCountExpression];
+    [expressionDescription setExpressionResultType:NSInteger64AttributeType];
+    
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:CLASS_NAME_HOSPITAL];
+    [request setPropertiesToFetch:[NSArray arrayWithObject:expressionDescription]];
+    request.resultType = NSDictionaryResultType;
+    
+    NSError *error = nil;
+    NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
+    
+    if (error) { NSLog(@"%@", error); }
+    
+    return [result.firstObject objectForKey:keyPath];
+}
+
 #pragma mark - File utilities
 
 - (void)readCSVFile:(NSString *)file {

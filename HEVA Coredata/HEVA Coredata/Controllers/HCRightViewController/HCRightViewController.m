@@ -8,6 +8,9 @@
 
 #import "HCRightViewController.h"
 
+// Model
+#import "HCModelManager.h"
+
 // Views
 #import "HCPieView.h"
 
@@ -39,8 +42,10 @@
     
     self.title = self.hospital.name.capitalizedString;
     
-    self.unitPieView.percent = [self.hospital.unitCount floatValue]/20073.0;
+    self.unitPieView.percent = [self.hospital.unitCount floatValue]/[[HCModelManager defaultModel] sumOfUnitCount];
     self.unitPieView.fillColor = [UIColor redColor];
+    
+    
 }
 
 @end
