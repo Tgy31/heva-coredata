@@ -17,6 +17,7 @@
 		5AF160D11C162C03004A63E0 /* HCLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160CF1C162C03004A63E0 /* HCLeftViewController.xib */; };
 		5AF160D61C162C1F004A63E0 /* HCRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160D41C162C1F004A63E0 /* HCRightViewController.m */; };
 		5AF160D71C162C1F004A63E0 /* HCRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160D51C162C1F004A63E0 /* HCRightViewController.xib */; };
+		5AF160DB1C162E69004A63E0 /* HCModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160DA1C162E69004A63E0 /* HCModelManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,8 @@
 		5AF160D31C162C1F004A63E0 /* HCRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCRightViewController.h; path = HCRightViewController/HCRightViewController.h; sourceTree = "<group>"; };
 		5AF160D41C162C1F004A63E0 /* HCRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCRightViewController.m; path = HCRightViewController/HCRightViewController.m; sourceTree = "<group>"; };
 		5AF160D51C162C1F004A63E0 /* HCRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HCRightViewController.xib; path = HCRightViewController/HCRightViewController.xib; sourceTree = "<group>"; };
+		5AF160D91C162E69004A63E0 /* HCModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCModelManager.h; sourceTree = "<group>"; };
+		5AF160DA1C162E69004A63E0 /* HCModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCModelManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 		5AF160C81C162BA1004A63E0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5AF160D91C162E69004A63E0 /* HCModelManager.h */,
+				5AF160DA1C162E69004A63E0 /* HCModelManager.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF160DB1C162E69004A63E0 /* HCModelManager.m in Sources */,
 				5AF160CB1C162BC7004A63E0 /* HCSplitViewController.m in Sources */,
 				5AF160D01C162C03004A63E0 /* HCLeftViewController.m in Sources */,
 				5AF160BB1C162A56004A63E0 /* HEVA_Coredata.xcdatamodeld in Sources */,
