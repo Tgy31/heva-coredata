@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HCRightViewController : UITableViewController
+// Model
+#import "HCHospital.h"
+
+@interface HCRightViewController : UIViewController
+
+- (instancetype)initWithHospital:(HCHospital *)hospital;
 
 @end

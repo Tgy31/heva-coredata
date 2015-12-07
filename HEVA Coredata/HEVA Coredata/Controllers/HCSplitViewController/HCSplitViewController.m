@@ -12,7 +12,7 @@
 #import "HCLeftViewController.h"
 #import "HCRightViewController.h"
 
-@interface HCSplitViewController ()
+@interface HCSplitViewController() <HCLeftViewControllerDelegate>
 
 @end
 
@@ -24,19 +24,39 @@
         
         // Left VC
         HCLeftViewController *leftVC = [HCLeftViewController new];
+        leftVC.delegate = self;
         UINavigationController *leftNavVC = [[UINavigationController alloc] initWithRootViewController:leftVC];
         
-        HCRightViewController *rightVC = [HCRightViewController new];
-        UINavigationController *rightNavVC = [[UINavigationController alloc] initWithRootViewController:rightVC];
+        // Right VC
+        UIViewController *rightVC = [self rightViewControllerForHospital:nil];
         
-        [self setViewControllers:@[leftNavVC, rightNavVC]];
+        [self setViewControllers:@[leftNavVC, rightVC]];
         
     }
     return self;
 }
 
+#pragma mark - View life cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+#pragma mark - Right VC factory
+
+- (UIViewController *)rightViewControllerForHospital:(HCHospital *)hospital {
+    
+    HCRightViewController *rootVC = [[HCRightViewController alloc] initWithHospital:hospital];
+    return [[UINavigationController alloc] initWithRootViewController:rootVC];
+}
+
+#pragma mark - HCLeftViewControllerDelegate
+
+- (void)leftViewController:(HCLeftViewController *)viewController didSelectHospital:(HCHospital *)hospital {
+    if (hospital) {
+        UIViewController *destination = [self rightViewControllerForHospital:hospital];
+        [self showDetailViewController:destination sender:viewController];
+    }
 }
 
 @end
