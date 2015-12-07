@@ -22,6 +22,7 @@
 		5AF160E11C16305E004A63E0 /* exercice.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160DE1C16305E004A63E0 /* exercice.xlsx */; };
 		5AF160E71C163595004A63E0 /* HCHospital+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160E41C163595004A63E0 /* HCHospital+CoreDataProperties.m */; };
 		5AF160E81C163595004A63E0 /* HCHospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160E61C163595004A63E0 /* HCHospital.m */; };
+		5AF160EC1C163BFD004A63E0 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160EB1C163BFD004A63E0 /* CoreDataTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,8 @@
 		5AF160E41C163595004A63E0 /* HCHospital+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "HCHospital+CoreDataProperties.m"; sourceTree = "<group>"; };
 		5AF160E51C163595004A63E0 /* HCHospital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCHospital.h; sourceTree = "<group>"; };
 		5AF160E61C163595004A63E0 /* HCHospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHospital.m; sourceTree = "<group>"; };
+		5AF160EA1C163BFD004A63E0 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = CoreDataTableViewController/CoreDataTableViewController.h; sourceTree = "<group>"; };
+		5AF160EB1C163BFD004A63E0 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = CoreDataTableViewController/CoreDataTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,7 @@
 				5AF160CC1C162BD7004A63E0 /* HCSplitViewController */,
 				5AF160D21C162C08004A63E0 /* HCLeftViewController */,
 				5AF160D81C162C22004A63E0 /* HCRightViewController */,
+				5AF160ED1C163C21004A63E0 /* CoreDataTableViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -170,6 +174,15 @@
 				5AF160E61C163595004A63E0 /* HCHospital.m */,
 			);
 			name = HCHospital;
+			sourceTree = "<group>";
+		};
+		5AF160ED1C163C21004A63E0 /* CoreDataTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160EA1C163BFD004A63E0 /* CoreDataTableViewController.h */,
+				5AF160EB1C163BFD004A63E0 /* CoreDataTableViewController.m */,
+			);
+			name = CoreDataTableViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +263,7 @@
 				5AF160CB1C162BC7004A63E0 /* HCSplitViewController.m in Sources */,
 				5AF160D01C162C03004A63E0 /* HCLeftViewController.m in Sources */,
 				5AF160BB1C162A56004A63E0 /* HEVA_Coredata.xcdatamodeld in Sources */,
+				5AF160EC1C163BFD004A63E0 /* CoreDataTableViewController.m in Sources */,
 				5AF160E81C163595004A63E0 /* HCHospital.m in Sources */,
 				5AF160E71C163595004A63E0 /* HCHospital+CoreDataProperties.m in Sources */,
 				5AF160B21C162A56004A63E0 /* AppDelegate.m in Sources */,
