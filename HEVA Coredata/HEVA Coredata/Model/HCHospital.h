@@ -11,6 +11,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+#define CLASS_NAME_HOSPITAL @"HCHospital"
+
 @interface HCHospital : NSManagedObject
 
 + (instancetype)hospitalWithName:(NSString *)name

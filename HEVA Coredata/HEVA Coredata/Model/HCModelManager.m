@@ -6,7 +6,6 @@
 //  Copyright © 2015 Tanguy Hélesbeux. All rights reserved.
 //
 
-#import <CoreData/CoreData.h>
 #import "HCModelManager.h"
 
 // Model
@@ -45,6 +44,20 @@ static HCModelManager *_defaultModel;
         _defaultModel = [HCModelManager new];
     }
     return _defaultModel;
+}
+
+#pragma mark - Fetch results controller factory
+
+- (NSFetchedResultsController *)hospitalsFetchResultsController {
+    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:CLASS_NAME_HOSPITAL];
+    request.sortDescriptors = @[[NSSortDescriptor sortDescriptorWithKey:@"name"
+                                                              ascending:YES
+                                                               selector:@selector(compare:)]];
+    
+    return [[NSFetchedResultsController alloc] initWithFetchRequest:request
+                                               managedObjectContext:self.managedObjectContext
+                                                 sectionNameKeyPath:nil
+                                                          cacheName:nil];
 }
 
 #pragma mark - File utilities

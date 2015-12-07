@@ -8,8 +8,6 @@
 
 #import "HCHospital.h"
 
-#define CLASS_NAME_HOSPITAL @"HCHospital"
-
 @implementation HCHospital
 
 #pragma mark - CoreData Access
@@ -33,7 +31,7 @@
             hospital = [NSEntityDescription insertNewObjectForEntityForName:CLASS_NAME_HOSPITAL inManagedObjectContext:context];
         }
         
-        //TODO attributes
+        hospital.name = name;
     }
     
     return hospital;

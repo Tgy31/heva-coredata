@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HCLeftViewController : UITableViewController
+// Super class
+#import "CoreDataTableViewController.h"
+
+@interface HCLeftViewController : CoreDataTableViewController
 
 @end

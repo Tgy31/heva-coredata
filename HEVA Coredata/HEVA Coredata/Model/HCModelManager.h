@@ -6,6 +6,7 @@
 //  Copyright © 2015 Tanguy Hélesbeux. All rights reserved.
 //
 
+#import <CoreData/CoreData.h>
 #import <Foundation/Foundation.h>
 
 @interface HCModelManager : NSObject
@@ -13,5 +14,7 @@
 + (instancetype)defaultModel;
 
 - (void)saveContext;
+
+- (NSFetchedResultsController *)hospitalsFetchResultsController;
 
 @end
