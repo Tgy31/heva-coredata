@@ -18,6 +18,8 @@
 		5AF160D61C162C1F004A63E0 /* HCRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160D41C162C1F004A63E0 /* HCRightViewController.m */; };
 		5AF160D71C162C1F004A63E0 /* HCRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160D51C162C1F004A63E0 /* HCRightViewController.xib */; };
 		5AF160DB1C162E69004A63E0 /* HCModelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160DA1C162E69004A63E0 /* HCModelManager.m */; };
+		5AF160E01C16305E004A63E0 /* exercice.csv in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160DD1C16305E004A63E0 /* exercice.csv */; };
+		5AF160E11C16305E004A63E0 /* exercice.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160DE1C16305E004A63E0 /* exercice.xlsx */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		5AF160D51C162C1F004A63E0 /* HCRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HCRightViewController.xib; path = HCRightViewController/HCRightViewController.xib; sourceTree = "<group>"; };
 		5AF160D91C162E69004A63E0 /* HCModelManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCModelManager.h; sourceTree = "<group>"; };
 		5AF160DA1C162E69004A63E0 /* HCModelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCModelManager.m; sourceTree = "<group>"; };
+		5AF160DD1C16305E004A63E0 /* exercice.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = exercice.csv; sourceTree = "<group>"; };
+		5AF160DE1C16305E004A63E0 /* exercice.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = exercice.xlsx; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,13 +75,11 @@
 		5AF160AC1C162A56004A63E0 /* HEVA Coredata */ = {
 			isa = PBXGroup;
 			children = (
+				5AF160DC1C16305E004A63E0 /* Ressources */,
 				5AF160B01C162A56004A63E0 /* AppDelegate.h */,
 				5AF160B11C162A56004A63E0 /* AppDelegate.m */,
 				5AF160C71C162BA1004A63E0 /* Controllers */,
 				5AF160C81C162BA1004A63E0 /* Model */,
-				5AF160BC1C162A56004A63E0 /* Assets.xcassets */,
-				5AF160BE1C162A56004A63E0 /* LaunchScreen.storyboard */,
-				5AF160C11C162A56004A63E0 /* Info.plist */,
 				5AF160B91C162A56004A63E0 /* HEVA_Coredata.xcdatamodeld */,
 				5AF160AD1C162A56004A63E0 /* Supporting Files */,
 			);
@@ -87,6 +89,9 @@
 		5AF160AD1C162A56004A63E0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				5AF160BC1C162A56004A63E0 /* Assets.xcassets */,
+				5AF160BE1C162A56004A63E0 /* LaunchScreen.storyboard */,
+				5AF160C11C162A56004A63E0 /* Info.plist */,
 				5AF160AE1C162A56004A63E0 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -138,6 +143,15 @@
 				5AF160D51C162C1F004A63E0 /* HCRightViewController.xib */,
 			);
 			name = HCRightViewController;
+			sourceTree = "<group>";
+		};
+		5AF160DC1C16305E004A63E0 /* Ressources */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160DD1C16305E004A63E0 /* exercice.csv */,
+				5AF160DE1C16305E004A63E0 /* exercice.xlsx */,
+			);
+			path = Ressources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +214,9 @@
 			files = (
 				5AF160C01C162A56004A63E0 /* LaunchScreen.storyboard in Resources */,
 				5AF160D11C162C03004A63E0 /* HCLeftViewController.xib in Resources */,
+				5AF160E01C16305E004A63E0 /* exercice.csv in Resources */,
 				5AF160D71C162C1F004A63E0 /* HCRightViewController.xib in Resources */,
+				5AF160E11C16305E004A63E0 /* exercice.xlsx in Resources */,
 				5AF160BD1C162A56004A63E0 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

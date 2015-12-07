@@ -22,6 +22,15 @@ static HCModelManager *_defaultModel;
 
 @implementation HCModelManager
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        NSArray *data = [self readCSVFile:@"exercice" withExtension:@"csv"];
+        NSLog(@"%@", data);
+    }
+    return self;
+}
+
 #pragma mark - Singleton
 
 + (instancetype)defaultModel {
@@ -29,6 +38,27 @@ static HCModelManager *_defaultModel;
         _defaultModel = [HCModelManager new];
     }
     return _defaultModel;
+}
+
+#pragma mark - File utilities
+
+- (NSArray *)readCSVFile:(NSString *)fileName withExtension:(NSString *)extension {
+    NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:extension];
+    NSError *error = nil;
+    NSString *string = [NSString stringWithContentsOfFile:path encoding:NSUTF8StringEncoding error:&error];
+    
+    if (error) {
+        NSLog(@"%@", error);
+        return nil;
+    }
+    
+    NSArray *lines = [string componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]];
+    NSMutableArray *finalArray = [NSMutableArray new];
+    for (NSString *line in lines) {
+        NSArray *array = [line componentsSeparatedByString:@","];
+        [finalArray addObject:array];
+    }
+    return finalArray;
 }
 
 #pragma mark - Core Data stack
