@@ -11,6 +11,19 @@
 // Super class
 #import "CoreDataTableViewController.h"
 
+// Model
+#import "HCHospital.h"
+
+@protocol HCLeftViewControllerDelegate;
+
 @interface HCLeftViewController : CoreDataTableViewController
+
+@property (weak, nonatomic) id<HCLeftViewControllerDelegate> delegate;
+
+@end
+
+@protocol HCLeftViewControllerDelegate <NSObject>
+
+- (void)leftViewController:(HCLeftViewController *)viewController didSelectHospital:(HCHospital *)hospital;
 
 @end

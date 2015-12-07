@@ -10,7 +10,6 @@
 
 // Model
 #import "HCModelManager.h"
-#import "HCHospital.h"
 
 @interface HCLeftViewController ()
 
@@ -20,6 +19,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = NSLocalizedString(@"Hospitals", @"Left VC title");
     
     self.fetchedResultsController = [[HCModelManager defaultModel] hospitalsFetchResultsController];
 }
@@ -45,6 +46,17 @@
     cell.textLabel.text = hospital.name;
     
     return cell;
+}
+
+#pragma mark - Table view delegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if ([self.delegate respondsToSelector:@selector(leftViewController:didSelectHospital:)]) {
+        HCHospital *hospital = [self hospitalForIndexPath:indexPath];
+        [self.delegate leftViewController:self didSelectHospital:hospital];
+    }
 }
 
 @end
