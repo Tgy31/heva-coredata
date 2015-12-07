@@ -2,20 +2,48 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9060"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HCRightViewController">
             <connections>
+                <outlet property="turnoverPieView" destination="FFx-KV-SRO" id="Q9j-1q-4My"/>
+                <outlet property="unitPieView" destination="9za-5w-4w3" id="HXN-bW-Lu7"/>
                 <outlet property="view" destination="ngM-D8-9yL" id="xUc-I6-CIq"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="ngM-D8-9yL">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="887" height="600"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9za-5w-4w3" customClass="HCPieView">
+                    <rect key="frame" x="100" y="150" width="300" height="300"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="9za-5w-4w3" secondAttribute="height" multiplier="1:1" id="FH1-eG-R6q"/>
+                        <constraint firstAttribute="width" constant="300" id="RHs-mu-zec"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FFx-KV-SRO" customClass="HCPieView">
+                    <rect key="frame" x="500" y="150" width="300" height="300"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="2zD-Jp-hOk"/>
+                        <constraint firstAttribute="width" secondItem="FFx-KV-SRO" secondAttribute="height" multiplier="1:1" id="pkN-6u-F2e"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-            <point key="canvasLocation" x="199" y="290"/>
+            <constraints>
+                <constraint firstItem="FFx-KV-SRO" firstAttribute="leading" secondItem="9za-5w-4w3" secondAttribute="trailing" constant="100" id="BaT-Oa-gs1"/>
+                <constraint firstItem="9za-5w-4w3" firstAttribute="centerY" secondItem="ngM-D8-9yL" secondAttribute="centerY" id="DFa-FT-0Ir"/>
+                <constraint firstItem="FFx-KV-SRO" firstAttribute="centerY" secondItem="9za-5w-4w3" secondAttribute="centerY" id="SGY-la-svt"/>
+                <constraint firstItem="9za-5w-4w3" firstAttribute="leading" secondItem="ngM-D8-9yL" secondAttribute="leading" constant="100" id="gjG-sV-axd"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="342.5" y="290"/>
         </view>
     </objects>
 </document>

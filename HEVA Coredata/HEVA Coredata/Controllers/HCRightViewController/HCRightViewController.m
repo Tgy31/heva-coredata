@@ -8,9 +8,15 @@
 
 #import "HCRightViewController.h"
 
+// Views
+#import "HCPieView.h"
+
 @interface HCRightViewController ()
 
 @property (strong, nonatomic) HCHospital *hospital;
+
+@property (weak, nonatomic) IBOutlet HCPieView *unitPieView;
+@property (weak, nonatomic) IBOutlet HCPieView *turnoverPieView;
 
 @end
 
@@ -32,6 +38,9 @@
     [super viewDidLoad];
     
     self.title = self.hospital.name.capitalizedString;
+    
+    self.unitPieView.percent = [self.hospital.unitCount floatValue]/20073.0;
+    self.unitPieView.fillColor = [UIColor redColor];
 }
 
 @end

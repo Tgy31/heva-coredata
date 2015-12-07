@@ -1,0 +1,16 @@
+//
+//  HCPieView.h
+//  HEVA Coredata
+//
+//  Created by Tanguy Hélesbeux on 07/12/2015.
+//  Copyright © 2015 Tanguy Hélesbeux. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface HCPieView : UIView
+
+@property (nonatomic) CGFloat percent;
+@property (strong, nonatomic) UIColor *fillColor;
+
+@end

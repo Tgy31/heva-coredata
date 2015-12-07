@@ -23,6 +23,7 @@
 		5AF160E71C163595004A63E0 /* HCHospital+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160E41C163595004A63E0 /* HCHospital+CoreDataProperties.m */; };
 		5AF160E81C163595004A63E0 /* HCHospital.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160E61C163595004A63E0 /* HCHospital.m */; };
 		5AF160EC1C163BFD004A63E0 /* CoreDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160EB1C163BFD004A63E0 /* CoreDataTableViewController.m */; };
+		5AF160F11C1643E6004A63E0 /* HCPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160F01C1643E6004A63E0 /* HCPieView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,8 @@
 		5AF160E61C163595004A63E0 /* HCHospital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCHospital.m; sourceTree = "<group>"; };
 		5AF160EA1C163BFD004A63E0 /* CoreDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreDataTableViewController.h; path = CoreDataTableViewController/CoreDataTableViewController.h; sourceTree = "<group>"; };
 		5AF160EB1C163BFD004A63E0 /* CoreDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CoreDataTableViewController.m; path = CoreDataTableViewController/CoreDataTableViewController.m; sourceTree = "<group>"; };
+		5AF160EF1C1643E6004A63E0 /* HCPieView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCPieView.h; path = HCPieView/HCPieView.h; sourceTree = "<group>"; };
+		5AF160F01C1643E6004A63E0 /* HCPieView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCPieView.m; path = HCPieView/HCPieView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,7 @@
 		5AF160AC1C162A56004A63E0 /* HEVA Coredata */ = {
 			isa = PBXGroup;
 			children = (
+				5AF160EE1C1643CB004A63E0 /* Views */,
 				5AF160DC1C16305E004A63E0 /* Ressources */,
 				5AF160B01C162A56004A63E0 /* AppDelegate.h */,
 				5AF160B11C162A56004A63E0 /* AppDelegate.m */,
@@ -185,6 +189,23 @@
 			name = CoreDataTableViewController;
 			sourceTree = "<group>";
 		};
+		5AF160EE1C1643CB004A63E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160F21C1643EB004A63E0 /* HCPieView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AF160F21C1643EB004A63E0 /* HCPieView */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160EF1C1643E6004A63E0 /* HCPieView.h */,
+				5AF160F01C1643E6004A63E0 /* HCPieView.m */,
+			);
+			name = HCPieView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -261,6 +282,7 @@
 			files = (
 				5AF160DB1C162E69004A63E0 /* HCModelManager.m in Sources */,
 				5AF160CB1C162BC7004A63E0 /* HCSplitViewController.m in Sources */,
+				5AF160F11C1643E6004A63E0 /* HCPieView.m in Sources */,
 				5AF160D01C162C03004A63E0 /* HCLeftViewController.m in Sources */,
 				5AF160BB1C162A56004A63E0 /* HEVA_Coredata.xcdatamodeld in Sources */,
 				5AF160EC1C163BFD004A63E0 /* CoreDataTableViewController.m in Sources */,
