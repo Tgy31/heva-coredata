@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		5AF160AF1C162A56004A63E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160AE1C162A56004A63E0 /* main.m */; };
 		5AF160B21C162A56004A63E0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160B11C162A56004A63E0 /* AppDelegate.m */; };
-		5AF160B51C162A56004A63E0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160B41C162A56004A63E0 /* ViewController.m */; };
-		5AF160B81C162A56004A63E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160B61C162A56004A63E0 /* Main.storyboard */; };
 		5AF160BB1C162A56004A63E0 /* HEVA_Coredata.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160B91C162A56004A63E0 /* HEVA_Coredata.xcdatamodeld */; };
 		5AF160BD1C162A56004A63E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160BC1C162A56004A63E0 /* Assets.xcassets */; };
 		5AF160C01C162A56004A63E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160BE1C162A56004A63E0 /* LaunchScreen.storyboard */; };
+		5AF160CB1C162BC7004A63E0 /* HCSplitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160CA1C162BC7004A63E0 /* HCSplitViewController.m */; };
+		5AF160D01C162C03004A63E0 /* HCLeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160CE1C162C03004A63E0 /* HCLeftViewController.m */; };
+		5AF160D11C162C03004A63E0 /* HCLeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160CF1C162C03004A63E0 /* HCLeftViewController.xib */; };
+		5AF160D61C162C1F004A63E0 /* HCRightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AF160D41C162C1F004A63E0 /* HCRightViewController.m */; };
+		5AF160D71C162C1F004A63E0 /* HCRightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AF160D51C162C1F004A63E0 /* HCRightViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +24,18 @@
 		5AF160AE1C162A56004A63E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5AF160B01C162A56004A63E0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5AF160B11C162A56004A63E0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		5AF160B31C162A56004A63E0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		5AF160B41C162A56004A63E0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		5AF160B71C162A56004A63E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5AF160BA1C162A56004A63E0 /* HEVA_Coredata.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HEVA_Coredata.xcdatamodel; sourceTree = "<group>"; };
 		5AF160BC1C162A56004A63E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AF160BF1C162A56004A63E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5AF160C11C162A56004A63E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5AF160C91C162BC7004A63E0 /* HCSplitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCSplitViewController.h; path = HCSplitViewController/HCSplitViewController.h; sourceTree = "<group>"; };
+		5AF160CA1C162BC7004A63E0 /* HCSplitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCSplitViewController.m; path = HCSplitViewController/HCSplitViewController.m; sourceTree = "<group>"; };
+		5AF160CD1C162C03004A63E0 /* HCLeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCLeftViewController.h; path = HCLeftViewController/HCLeftViewController.h; sourceTree = "<group>"; };
+		5AF160CE1C162C03004A63E0 /* HCLeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCLeftViewController.m; path = HCLeftViewController/HCLeftViewController.m; sourceTree = "<group>"; };
+		5AF160CF1C162C03004A63E0 /* HCLeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HCLeftViewController.xib; path = HCLeftViewController/HCLeftViewController.xib; sourceTree = "<group>"; };
+		5AF160D31C162C1F004A63E0 /* HCRightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HCRightViewController.h; path = HCRightViewController/HCRightViewController.h; sourceTree = "<group>"; };
+		5AF160D41C162C1F004A63E0 /* HCRightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HCRightViewController.m; path = HCRightViewController/HCRightViewController.m; sourceTree = "<group>"; };
+		5AF160D51C162C1F004A63E0 /* HCRightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HCRightViewController.xib; path = HCRightViewController/HCRightViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,9 +70,8 @@
 			children = (
 				5AF160B01C162A56004A63E0 /* AppDelegate.h */,
 				5AF160B11C162A56004A63E0 /* AppDelegate.m */,
-				5AF160B31C162A56004A63E0 /* ViewController.h */,
-				5AF160B41C162A56004A63E0 /* ViewController.m */,
-				5AF160B61C162A56004A63E0 /* Main.storyboard */,
+				5AF160C71C162BA1004A63E0 /* Controllers */,
+				5AF160C81C162BA1004A63E0 /* Model */,
 				5AF160BC1C162A56004A63E0 /* Assets.xcassets */,
 				5AF160BE1C162A56004A63E0 /* LaunchScreen.storyboard */,
 				5AF160C11C162A56004A63E0 /* Info.plist */,
@@ -80,6 +87,52 @@
 				5AF160AE1C162A56004A63E0 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AF160C71C162BA1004A63E0 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160CC1C162BD7004A63E0 /* HCSplitViewController */,
+				5AF160D21C162C08004A63E0 /* HCLeftViewController */,
+				5AF160D81C162C22004A63E0 /* HCRightViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5AF160C81C162BA1004A63E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5AF160CC1C162BD7004A63E0 /* HCSplitViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160C91C162BC7004A63E0 /* HCSplitViewController.h */,
+				5AF160CA1C162BC7004A63E0 /* HCSplitViewController.m */,
+			);
+			name = HCSplitViewController;
+			sourceTree = "<group>";
+		};
+		5AF160D21C162C08004A63E0 /* HCLeftViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160CD1C162C03004A63E0 /* HCLeftViewController.h */,
+				5AF160CE1C162C03004A63E0 /* HCLeftViewController.m */,
+				5AF160CF1C162C03004A63E0 /* HCLeftViewController.xib */,
+			);
+			name = HCLeftViewController;
+			sourceTree = "<group>";
+		};
+		5AF160D81C162C22004A63E0 /* HCRightViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AF160D31C162C1F004A63E0 /* HCRightViewController.h */,
+				5AF160D41C162C1F004A63E0 /* HCRightViewController.m */,
+				5AF160D51C162C1F004A63E0 /* HCRightViewController.xib */,
+			);
+			name = HCRightViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,6 +161,7 @@
 		5AF160A21C162A56004A63E0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = HC;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Tanguy Hélesbeux";
 				TargetAttributes = {
@@ -140,8 +194,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF160C01C162A56004A63E0 /* LaunchScreen.storyboard in Resources */,
+				5AF160D11C162C03004A63E0 /* HCLeftViewController.xib in Resources */,
+				5AF160D71C162C1F004A63E0 /* HCRightViewController.xib in Resources */,
 				5AF160BD1C162A56004A63E0 /* Assets.xcassets in Resources */,
-				5AF160B81C162A56004A63E0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,9 +207,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF160CB1C162BC7004A63E0 /* HCSplitViewController.m in Sources */,
+				5AF160D01C162C03004A63E0 /* HCLeftViewController.m in Sources */,
 				5AF160BB1C162A56004A63E0 /* HEVA_Coredata.xcdatamodeld in Sources */,
-				5AF160B51C162A56004A63E0 /* ViewController.m in Sources */,
 				5AF160B21C162A56004A63E0 /* AppDelegate.m in Sources */,
+				5AF160D61C162C1F004A63E0 /* HCRightViewController.m in Sources */,
 				5AF160AF1C162A56004A63E0 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,14 +219,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5AF160B61C162A56004A63E0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5AF160B71C162A56004A63E0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5AF160BE1C162A56004A63E0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

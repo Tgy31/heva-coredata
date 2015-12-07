@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  HCLeftViewController.h
 //  HEVA Coredata
 //
 //  Created by Tanguy Hélesbeux on 07/12/2015.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface HCLeftViewController : UITableViewController
 
 @end
-
