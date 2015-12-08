@@ -17,5 +17,6 @@
 
 - (NSFetchedResultsController *)hospitalsFetchResultsController;
 - (NSInteger)sumOfUnitCount;
+- (NSDecimalNumber *)sumOfTurnover;
 
 @end

@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
@@ -34,12 +34,28 @@
                         <constraint firstAttribute="width" secondItem="FFx-KV-SRO" secondAttribute="height" multiplier="1:1" id="pkN-6u-F2e"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unit count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3F0-7S-mqb">
+                    <rect key="frame" x="210" y="97" width="79.5" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Turnover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZOI-kj-DOD">
+                    <rect key="frame" x="616" y="97.5" width="68" height="20.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="FFx-KV-SRO" firstAttribute="leading" secondItem="9za-5w-4w3" secondAttribute="trailing" constant="100" id="BaT-Oa-gs1"/>
                 <constraint firstItem="9za-5w-4w3" firstAttribute="centerY" secondItem="ngM-D8-9yL" secondAttribute="centerY" id="DFa-FT-0Ir"/>
+                <constraint firstItem="9za-5w-4w3" firstAttribute="top" secondItem="3F0-7S-mqb" secondAttribute="bottom" constant="32" id="HX4-3O-FeK"/>
+                <constraint firstItem="3F0-7S-mqb" firstAttribute="centerX" secondItem="9za-5w-4w3" secondAttribute="centerX" id="Nge-e7-SF2"/>
                 <constraint firstItem="FFx-KV-SRO" firstAttribute="centerY" secondItem="9za-5w-4w3" secondAttribute="centerY" id="SGY-la-svt"/>
+                <constraint firstItem="ZOI-kj-DOD" firstAttribute="centerX" secondItem="FFx-KV-SRO" secondAttribute="centerX" id="Sd2-mA-Fvo"/>
+                <constraint firstItem="ZOI-kj-DOD" firstAttribute="centerY" secondItem="3F0-7S-mqb" secondAttribute="centerY" id="dQZ-9b-S9P"/>
                 <constraint firstItem="9za-5w-4w3" firstAttribute="leading" secondItem="ngM-D8-9yL" secondAttribute="leading" constant="100" id="gjG-sV-axd"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>

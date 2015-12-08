@@ -24,6 +24,9 @@ static HCModelManager *_defaultModel;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 
+@property (nonatomic) NSInteger totalUnit;
+@property (strong, nonatomic) NSDecimalNumber *totalTurnover;
+
 
 @end
 
@@ -32,6 +35,8 @@ static HCModelManager *_defaultModel;
 - (instancetype)init {
     self = [super init];
     if (self) {
+        _totalUnit = 0;
+        _totalTurnover = [NSDecimalNumber zero];
         [self readCSVFile:@"exercice"];
     }
     return self;
@@ -63,30 +68,11 @@ static HCModelManager *_defaultModel;
 #pragma mark - Sums
 
 - (NSInteger)sumOfUnitCount {
-    NSNumber *sum = [self sumForKeyPath:@"unitCount"];
-    return [sum integerValue];
+    return self.totalUnit;
 }
 
-- (NSNumber *)sumForKeyPath:(NSString *)keyPath {
-    NSExpression *keyPathExpression = [NSExpression expressionForKeyPath:keyPath];
-    NSExpression *sumOfCountExpression = [NSExpression expressionForFunction:@"sum:"
-                                                                   arguments:[NSArray arrayWithObject:keyPathExpression]];
-    
-    NSExpressionDescription *expressionDescription = [[NSExpressionDescription alloc] init];
-    [expressionDescription setName:keyPath];
-    [expressionDescription setExpression:sumOfCountExpression];
-    [expressionDescription setExpressionResultType:NSInteger64AttributeType];
-    
-    NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:CLASS_NAME_HOSPITAL];
-    [request setPropertiesToFetch:[NSArray arrayWithObject:expressionDescription]];
-    request.resultType = NSDictionaryResultType;
-    
-    NSError *error = nil;
-    NSArray *result = [self.managedObjectContext executeFetchRequest:request error:&error];
-    
-    if (error) { NSLog(@"%@", error); }
-    
-    return [result.firstObject objectForKey:keyPath];
+- (NSDecimalNumber *)sumOfTurnover {
+    return self.totalTurnover;
 }
 
 #pragma mark - File utilities
@@ -117,6 +103,8 @@ static HCModelManager *_defaultModel;
             NSDecimalNumber *turnover = [NSDecimalNumber decimalNumberWithString:sTurnover];
             
             [self hospitalWithName:name unitCount:unitCount turnover:turnover];
+            self.totalUnit = self.totalUnit + [unitCount integerValue];
+            self.totalTurnover = [self.totalTurnover decimalNumberByAdding:turnover];
         }
     }
 }

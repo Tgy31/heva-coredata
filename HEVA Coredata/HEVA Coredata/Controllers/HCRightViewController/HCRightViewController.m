@@ -42,10 +42,13 @@
     
     self.title = self.hospital.name.capitalizedString;
     
-    self.unitPieView.percent = [self.hospital.unitCount floatValue]/[[HCModelManager defaultModel] sumOfUnitCount];
+    NSInteger totalUnit = [[HCModelManager defaultModel] sumOfUnitCount];
+    self.unitPieView.percent = [self.hospital.unitCount floatValue] / totalUnit;
     self.unitPieView.fillColor = [UIColor redColor];
     
-    
+    NSDecimalNumber *totalTurnover = [[HCModelManager defaultModel] sumOfTurnover];
+    self.turnoverPieView.percent = [[self.hospital.turnover decimalNumberByDividingBy:totalTurnover] floatValue];
+    self.turnoverPieView.fillColor = [UIColor blueColor];
 }
 
 @end
